@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora simples em html e js</title>
+</head>
+<body>
+    <form>
+    <table border="0">
+       <tr>
+           <th colspan="5">Calculadora simples em HTML e JavaScript</th>
+       </tr>
+       <tr>
+           <td>val1<input type="text" name="val1" id="val1"></td>
+       <td>
+           <select name="sinal" id="sinal">
+           <option value="+">+</option>
+           <option value="-">-</option>
+           <option value="*">*</option>
+           <option value="/">/</option>
+        </select>
+       </td>
+       <td>val2<input type="text" name="val2" id="val2"></td>
+       <td><input type="button" value="=" onclick="calcular();"></td>
+    <td><input type="text" name="result" id="result"></td>
+    </tr>
+      
+    </table>
+</form>
+
+<script type="text/javascript">
+
+    function calcular(){
+
+        let val1   = Number(document.getElementById("val1").value);
+        let val2   = Number(document.getElementById("val2").value);
+        let sinal  = document.getElementById("sinal").value;
+        let result = document.getElementById("result");
+       
+        //console.log(val2)
+        
+        if (sinal == "+") result.value = val1 + val2;
+        if (sinal == "-") result.value = val1 - val2;
+        if (sinal == "*") result.value = val1 * val2;
+        if (sinal == "/") result.value = val1 / val2;
+    }
+
+</script>
+</body>
+</html>
